@@ -14,7 +14,7 @@ if [ -f $ENV_DIR/PROJECT_PATH ]; then
 		TMP_DIR=`mktemp -d $CACHE_DIR/subdirXXXXX`
 		echo "       created tmp dir: $TMP_DIR"
 		echo "       moving working dir: $PROJECT_PATH to $TMP_DIR"
-		cp -R $BUILD_DIR/$PROJECT_PATH/. $TMP_DIR/
+		cp -RL $BUILD_DIR/$PROJECT_PATH/. $TMP_DIR/
 	 	echo "       cleaning build dir $BUILD_DIR"
 		rm -rf $BUILD_DIR
 		echo "       recreating $BUILD_DIR"
